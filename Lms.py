@@ -1,6 +1,7 @@
-fd =open("lms.text",'a')
 
-def add_book():
+fd =open("lms.text",'a')  #open file in append mode
+
+def add_book():# it is function to add books
     title = input("Enter the title of the book: ")
     author = input("\nEnter the author of the book: ")
     fd.write(title)
@@ -9,16 +10,16 @@ def add_book():
     fd.write("\n")
 
    
-fd_ =open("lms.text",'r')
+fd_ =open("lms.text",'r')  #open file to read data
 
-def view_books():
+def view_books():        #Function to view the book
     print(fd_.read())
-    fd_.close()
+    fd_.close() #close the file after reading
     
    
 
 while True:
-    print("\nLibrary Management System Menu:")
+    print("\nLibrary Management System Option:")
     print("1. Add a book")
     print("2. View books")
     print("3. Exit")
@@ -36,4 +37,4 @@ while True:
     else:
         print("Invalid choice. Please try again.")
 
-fd.close() 
+fd.close() # close the file after program execution
